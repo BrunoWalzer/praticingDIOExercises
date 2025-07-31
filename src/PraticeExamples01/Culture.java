@@ -4,7 +4,7 @@ public record Culture(double taxRate, double price) implements TaxMethods {
 
     @Override
     public double calculateTax(double taxRate) {
-        return price - ((taxRate / 100) * price);
+        return (taxRate / 100) * price;
     }
 
     public double getPrice() {
